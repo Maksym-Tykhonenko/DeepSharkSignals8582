@@ -19,9 +19,9 @@ const ProdView = ({ navigation, route }) => {
   const isFocused = useIsFocused();
 
   const [product, setProduct] = useState(route.params?.product);
-  const [timeStampUserId, setTimeStampUserId] = useState(
-    route.params?.timeStampUserId,
-  );
+  //const [timeStampUserId, setTimeStampUserId] = useState(
+  //  route.params?.timeStampUserId,
+  //);
 
   const [customUserAgent] = useState(route.params?.customUserAgent);
 

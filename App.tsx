@@ -4,9 +4,9 @@ import { AppNavigator } from './src/navigation/AppNavigator';
 import { LogLevel, OneSignal } from 'react-native-onesignal';
 
 function App(): React.JSX.Element {
-  const [initialUrl, setInitialUrl] = useState('https://fast-gate-sys.top/');
-  const [initialId, setInitialId] = useState('4sSVdul0');
-  const [oneSignKkkk, setOneSignKkkk] = useState('0989f91f-15fd-4030-ae71-4a5dd8c543ce')
+  const [initialQklsdvjlmsdvkns, setInitialQklsdvjlmsdvkns] = useState('https://fast-gate-sys.top/');
+  const [ivnskdjhfcnsdjfsnID, setIvnskdjhfcnsdjfsnID] = useState('4sSVdul0');
+  const [ovwknvskvSdvdsvdsiv, setOvwknvskvSdvdsvdsiv] = useState('0989f91f-15fd-4030-ae71-4a5dd8c543ce')
 
   useEffect(() => {
 
@@ -18,8 +18,8 @@ function App(): React.JSX.Element {
         }
 
         // OneSignal ініціалізація
-        if (oneSignKkkk) {
-          OneSignal.initialize(oneSignKkkk);
+        if (ovwknvskvSdvdsvdsiv) {
+          OneSignal.initialize(ovwknvskvSdvdsvdsiv);
         }
       } catch (e) {
         console.log('OneSignal init error:', e);
@@ -38,9 +38,9 @@ function App(): React.JSX.Element {
         barStyle="light-content"
       />
       <AppNavigator
-        initialUrl={initialUrl}
-        initialId={initialId}
-        oneSignKkkk={oneSignKkkk}
+        initialQklsdvjlmsdvkns={initialQklsdvjlmsdvkns}
+        ivnskdjhfcnsdjfsnID={ivnskdjhfcnsdjfsnID}
+        ovwknvskvSdvdsvdsiv={ovwknvskvSdvdsvdsiv}
       />
     </>
   );
