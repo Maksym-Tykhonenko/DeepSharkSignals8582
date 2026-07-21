@@ -340,7 +340,7 @@ const ProdView = ({ navigation, route }) => {
               url: gameUrl,
               customUserAgent,
               product,
-              timeStampUserId,
+              //timeStampUserId,
               responseToPushPermition: route.params?.responseToPushPermition,
             },
           },
@@ -487,7 +487,7 @@ const ProdView = ({ navigation, route }) => {
               customUserAgent,
 
               product,
-              timeStampUserId,
+              //timeStampUserId,
               responseToPushPermition: route.params?.responseToPushPermition,
             },
           },
